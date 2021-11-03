@@ -134,10 +134,10 @@ To run python and GNU Screen on Ubuntu Server:
 
 To run the simulator interactively:
 
-* git clone https://github.com/samm40me/Web-Crawler
-* cd your_repo
-* docker build -t crawler_test .
-* docker run --rm -p 8080:8080 crawler_test:latest
+    git clone https://github.com/samm40me/Web-Crawler
+    cd your_repo
+    docker build -t crawler_test .
+    docker run --rm -p 8080:8080 crawler_test:latest
 
 To run with Ubuntu & GNU Screen:
 
