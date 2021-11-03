@@ -132,7 +132,7 @@ To run python and GNU Screen on Ubuntu Server:
     sudo apt install python3-regex
     sudo apt-get install screen
 
-To run the simulator interactively:
+To run the web crawler on docker:
 
     git clone https://github.com/samm40me/Web-Crawler
     cd your_repo
