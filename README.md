@@ -139,7 +139,7 @@ To run the web crawler on docker:
     docker build -t crawler_test .
     docker run --rm -p 8080:8080 crawler_test:latest
 
-To run with Ubuntu & GNU Screen:
+Thought Process 
 
-    screen
-    ps aux | grep run.py 
+    A POST message is initated first and return 200 if the job_id exist. A web crawler can be designed in different ways. In this project it
+    was designed to add a few starting websites, also known as seed websites, to the queue list of the crawler. From the starting websites the crawler collects all hypertext         links and adds them into the queue.  This means many HTTP requests need to be handled concurrently. After this we invoke crawler with thread. The number of URLs being           processed and completed are shown.The GET method used lastly to fetch     the images. It is usually challenge to put a POST and GET methods in the same code, but we were         able to achieve this creating functions and using different variables. 
