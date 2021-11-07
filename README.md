@@ -4,26 +4,13 @@
 
 This is a URL crawler writen in Python and supports threads/coroutines.
 
-## Preamble
+### Packages Used
 
-For this coding challenge, the python script originally done by Kahlil was modified. 
+    Python 3
 
-https://github.com/tartansandal/mr-robot
+    Flask
 
-### Initial Plan
-
-* Use Python 3
-
-* Test using pytest
-
-* Use a virtual env and pip
-
-* Not distributing a library, so no need for setuptools
-
-* There is bound to be a command line parser that supports both interactive
-  and streaming input. Although its pretty simple, I would rather not reinvent
-  that wheel. _Edit: Looking around, it seems a simple regexp matcher will do fine --
-  anything else is overkill, although the `cmd` module would probably be okay._
+    Docker 
 
 ### Requirements
     Application MUST take the form of a Web API server, providing three endpoints (see next section)
@@ -35,85 +22,6 @@ https://github.com/tartansandal/mr-robot
 ● You MUST use the JSON format for communication, and follow the messages format defined in the next sections.
 ● Your repository MUST contain a Dockerfile that will be used to build your application.
 ● You can use any technology/library that you want but everything must run in your container.
-
-### Specification Details
-
-Create an application that can read in commands of the following form:
-
-PLACE X,Y,F
-
-MOVE
-
-LEFT
-
-RIGHT
-
-REPORT
-
-PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST.
-The origin (0,0) can be considered to be the SOUTH WEST most corner.
-The first valid command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command.
-The application should discard all commands in the sequence until a valid PLACE command has been executed.
-
-MOVE will move the toy robot one unit forward in the direction it is currently facing.
-
-LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
-
-REPORT will announce the X,Y and F of the robot. This can be in any form, but standard output is sufficient.
-
-A robot that is not on the table can choose the ignore the MOVE, LEFT, RIGHT and REPORT commands.
-Input can be from a file, or from standard input, as the developer chooses.
-Provide test data to exercise the application.
-
-### Constraints
-
-The toy robot must not fall off the table during movement - this also includes the initial placement of the toy robot.
-Any move that would cause the robot to fall must be ignored.
-
-Example Input and Output
-
-If using stdout:
-
-a)
-
-PLACE 0,0,NORTH
-
-MOVE
-
-REPORT
-
-Output: 0,1,NORTH
-
- 
-
-b)
-
-PLACE 0,0,NORTH
-
-LEFT
-
-REPORT
-
-Output: 0,0,WEST
-
- 
-
-c)
-
-PLACE 1,2,EAST
-
-MOVE
-
-MOVE
-
-LEFT
-
-MOVE
-
-REPORT
-
-Output: 3,3,NORTH
-
 
 ## Usage
 
