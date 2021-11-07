@@ -26,8 +26,8 @@ https://github.com/tartansandal/mr-robot
   anything else is overkill, although the `cmd` module would probably be okay._
 
 ### Requirements
-● Your application MUST take the form of a Web API server, providing three endpoints (see next section)
-● Your application MUST be able to run multiple crawling jobs simultaneously.
+    Application MUST take the form of a Web API server, providing three endpoints (see next section)
+●   Application MUST be able to run multiple crawling jobs simultaneously.
 ● We expect to be able to get information/result about a running/finished job from your application (using its job ID).
 ● Your application should crawl the URLs recursively only until the second level (to avoid a large amount of data). Fetch the images, from img tags, for each given URL and their children.
 ● The data extracted will be a set of image URLs (absolute path) for each URL given in the job description, only keep PNG, GIF and JPEG images. There shouldn’t be duplicates in the sets.
