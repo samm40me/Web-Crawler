@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a URL crawler writen in Python and supports threads/coroutines.
+This web crawler was writen in Python and supports threadsing.
 
 ### Packages Used
 
