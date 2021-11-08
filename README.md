@@ -39,7 +39,7 @@ To run the web crawler on docker:
     docker build -t crawler_test .
     docker run --rm -p 8080:8080 crawler_test:latest
 
-Thought Process 
+## Thought Process 
 
     A POST message is initated first and return 200. A web crawler can be designed in different ways, in this project, it
     was designed to run the given urls simulatenously, also known as seed websites, to the queue list of the crawler. 
