@@ -41,11 +41,11 @@ To run the web crawler on docker:
 
 Thought Process 
 
-    A POST message is initated first and return 200 if the job_id exist. A web crawler can be designed in different ways. In this project it
-    was designed to add a few starting websites, also known as seed websites, to the queue list of the crawler. 
+    A POST message is initated first and return 200. A web crawler can be designed in different ways, in this project, it
+    was designed to run the given urls simulatenously, also known as seed websites, to the queue list of the crawler. 
     From the starting websites the crawler collects all hypertext links and adds them into the queue.  
-    This means many HTTP requests need to be handled concurrently. After this we invoke crawler with thread. 
-    The number of URLs being  processed and completed are shown.The GET method used lastly to fetch the images. 
+    This means many HTTP requests need to be handled concurrently. After this I invoke crawler with thread. 
+    The number of URLs being  processed and completed are shown.The GET method was used lastly to fetch the images. 
  
  Challenges
  
