@@ -31,7 +31,7 @@ def crawler(self, status):
     return job_counter(SITES)
 
 @app.route('/jobs/<string:job-id>/result', methods=['GET'])
-def getdata(self, result):
+def get_result(self, result):
     return getdata()
 
 if __name__ == '__main__':
