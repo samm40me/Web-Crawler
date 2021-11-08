@@ -60,8 +60,8 @@ def job_counter(sites):
                threads.remove(thread)   
 
 def getdata():
-    for i in SITES:
-	    r = requests.get(i)
+    for site in SITES:
+	    r = requests.get(site)
 	    return r.text 
 
 htmldata = getdata() 
