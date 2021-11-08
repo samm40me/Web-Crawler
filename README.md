@@ -25,14 +25,6 @@ This is a URL crawler writen in Python and supports threads/coroutines.
 
 ## Usage
 
-To use and setup the python script and expand into a working, responsive web application, continuously deployed in AWS Cloud:
-
-To connect to Ubuntu Server:
-
-    log into aws ec2 console and create an ec2 instance with SSH and HTTP security group
-    
-    download keypairs to configure putty and connect to the Ubuntu Serser
-
 To run virtual environment 
 
     python -m venv virtual
@@ -54,4 +46,7 @@ Thought Process
     From the starting websites the crawler collects all hypertext links and adds them into the queue.  
     This means many HTTP requests need to be handled concurrently. After this we invoke crawler with thread. 
     The number of URLs being  processed and completed are shown.The GET method used lastly to fetch the images. 
-    It is usually challenge to put a POST and GET methods in the same code, but we were able to achieve this creating functions and using different variables. 
+ 
+ Challenges
+ 
+    The main.py (python file) works file and was able to get the images and number of jobs crawed for the docker build -t crawler_test. Hoever, it a bit difficult getting JSON response back from the urls when coupled with flask and executed the run --rm -p 8080:8080 crawler_test:latest. The quick way to fix this would to include a html file through a render_template instead of using postman to view the result. 
