@@ -34,8 +34,8 @@ To run virtual environment
 
 To run the web crawler on docker:
 
-    git clone https://github.com/samm40me/Web-Crawler
-    cd your_repo
+    git clone repo
+    cd repo
     docker build -t crawler_test .
     docker run --rm -p 8080:8080 crawler_test:latest
 
